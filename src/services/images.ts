@@ -1,10 +1,10 @@
 import { AxiosResponse } from 'axios';
 import httpClient from './http-client';
-import AsyncStorage from '@react-native-community/async-storage';
+import { store } from '../store/store';
 import { Photo } from '../common/models';
 
 async function getImages (): Promise<Photo[]> {
-  const token = await AsyncStorage.getItem('AUTH_TOKEN');
+  const token = store.getState().session.token;
   const response: AxiosResponse = await httpClient.get('/images', {
     headers: {
       Authorization: `Bearer ${token}`,

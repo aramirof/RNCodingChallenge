@@ -1,31 +1,30 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { Credentials } from './models';
 import { getToken } from '../services/auth';
+import { useAppDispatch } from '../store/hooks';
+import { login } from '../store/slices/session';
 
 type UseLoginHook = () => [
   (credentials: Credentials) => Promise<any>,
   boolean,
   Error | undefined,
-  string | undefined,
 ];
 
 const useLogin: UseLoginHook = () => {
   
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>();
-  const [token, setToken] = useState<string | undefined>(undefined);
+  const dispatch = useAppDispatch();
 
   const execRequest = async (credentials: Credentials) => {
     try {
-      setToken(undefined);
       setError(undefined);
       setLoading(true);
       let token = await getToken(credentials);
-      console.log(token);
-      setToken(token);
+      setLoading(false);
+      dispatch(login(token));
     } catch (err) {
       setError(err as Error);
-    } finally {
       setLoading(false);
     }
   }
@@ -34,7 +33,6 @@ const useLogin: UseLoginHook = () => {
     execRequest,
     loading,
     error,
-    token,
   ]
 
 }

@@ -2,24 +2,18 @@ import React, { FC, useEffect, useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-community/async-storage';
 
+import { useAppSelector } from '../store/hooks';
+import { selectToken } from '../store/slices/session';
+
 import { LoginScreen } from './Auth';
 import { MyPhotosScreen } from './Photos';
 
 const Stack = createNativeStackNavigator();
 
 const MainNavigator: FC = () => {
-  // TODO: Agregar selector
 
-  const [token, setToken] = useState<string>();
+  const token = useAppSelector(selectToken);
   const isAuthenticated = !!token;
-  const validateAuth = async () => {
-    const t = await AsyncStorage.getItem('AUTH_TOKEN');
-    setToken(t || '');
-  };
-
-  useEffect(() => {
-    validateAuth();
-  }, []);
   
   return (
     <Stack.Navigator

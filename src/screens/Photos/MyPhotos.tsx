@@ -14,10 +14,15 @@ import {
   PhotoItem,
 } from './components';
 import { Photo } from '../../common/models';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { logout } from '../../store/slices/session';
+import { selectList } from '../../store/slices/photos';
 
 const MyPhotosScreen: FC = () => {
 
-  const [loadPhotos, loading, error, photos] = usePhotos();
+  const [loadPhotos, loading, error] = usePhotos();
+  const dispatch = useAppDispatch();
+  const photos = useAppSelector(selectList);
 
   useEffect(() => {
     loadPhotos();
@@ -28,7 +33,7 @@ const MyPhotosScreen: FC = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF"/>
       <ScreenHeader>
         <ScreenTitle>My photos</ScreenTitle>
-        <Pressable onPress={() => null}>
+        <Pressable onPress={() => dispatch(logout())}>
           <ButtonLabel>Log out</ButtonLabel>
         </Pressable>
       </ScreenHeader>

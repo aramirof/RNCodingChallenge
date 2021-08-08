@@ -1,27 +1,28 @@
 import { useState, useCallback } from 'react';
 import { Photo } from './models';
 import { getImages } from '../services/images';
+import { useAppDispatch } from '../store/hooks';
+import { setList, clean } from '../store/slices/photos';
 
 type UsePhotosHook = () => [
   () => Promise<any>,
   boolean,
   Error | undefined,
-  Photo[] | undefined,
 ];
 
 const usePhotos: UsePhotosHook = () => {
   
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | undefined>();
-  const [photos, setPhotos] = useState<Photo[] | undefined>();
+  const dispatch = useAppDispatch();
 
   const execRequest = async () => {
     try {
-      setPhotos(undefined);
+      dispatch(clean())
       setError(undefined);
       setLoading(true);
       let photos = await getImages();
-      setPhotos(photos);
+      dispatch(setList(photos))
     } catch (err) {
       setError(err as Error);
     } finally {
@@ -33,7 +34,6 @@ const usePhotos: UsePhotosHook = () => {
     execRequest,
     loading,
     error,
-    photos,
   ]
 
 }

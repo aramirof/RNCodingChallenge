@@ -32,7 +32,8 @@ const PhotoList = styled.FlatList`
 
 const TabBar = styled.View`
   background: #FFFFFF;
-  box-shadow: 0px 0px 7px rgba(126, 151, 168, 0.24);
+  border-top-color: #ECEDF2;
+  border-top-width: 1px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
