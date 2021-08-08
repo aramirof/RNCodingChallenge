@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components/native';
+import { Photo } from '../../common/models';
 
 const ScreenHeader = styled.View`
   flex-direction: row;
@@ -16,6 +17,11 @@ const ButtonLabel = styled.Text`
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #373A4D;
+`;
+
+const EmptyListWrapper = styled.View`
+  align-items: center;
+  padding-top: 80px;
 `;
 
 const PhotoList = styled.FlatList`
@@ -87,14 +93,7 @@ const PhotoDescription = styled.Text`
   color: #8F92A9;
 `;
 
-export interface PhotoItemProps {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-}
-
-const PhotoItem: FC<PhotoItemProps> = ({
+const PhotoItem: FC<Photo> = ({
   title,
   description,
   image,
@@ -116,6 +115,7 @@ const PhotoItem: FC<PhotoItemProps> = ({
 export {
   ScreenHeader,
   ButtonLabel,
+  EmptyListWrapper,
   PhotoList,
   TabBar,
   TabItem,

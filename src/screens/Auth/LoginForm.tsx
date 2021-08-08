@@ -1,14 +1,12 @@
-import React, { FC, useState } from 'react';
-import { TextInputProps, Image, TouchableOpacityProps, TouchableOpacity } from 'react-native';
+import React, { FC, useEffect, useState } from 'react';
+import useLogin from '../../common/use-login';
+import { Alert, TextInputProps, Image, TouchableOpacityProps, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
-
-interface Credentials {
-  username: string;
-  password: string;
-}
+import { Credentials } from '../../common/models';
 
 interface LoginFormProps {
   onSubmit?: (c: Credentials) => void;
+  onSuccess?: (token: string) => void;
 }
 
 interface InputProps {
@@ -144,19 +142,36 @@ const FormTextLink: FC<FormTextLinkProps> = ({
 );
 
 const LoginForm: FC<LoginFormProps> = ({
-  onSubmit,
+  onSuccess,
 }) => {
   const [username, setUsername] = useState<string>();
   const [password, setPassword] = useState<string>();
+  const hasEmptyFields = !username || !password;
+  const [getToken, loading, error, result] = useLogin();
 
   const validateAndSubmit = () => {
     if (username && password) {
-      onSubmit && onSubmit({
+      getToken({
         username,
         password,
       });
     }
   }
+
+  useEffect(() => {
+    if (!loading && error) {
+      Alert.alert(
+        'Login failed',
+        'Please verify your credentials and try again.'
+      );
+    }
+  }, [loading, error]);
+  
+  useEffect(() => {
+    if (!loading && result) {
+      onSuccess && onSuccess(result);
+    }
+  }, [loading, result]);
 
   return (
     <LoginFormWrapper>
@@ -174,10 +189,12 @@ const LoginForm: FC<LoginFormProps> = ({
         onPress={() => null}
       />
       <FormButton
-        disabled={!username || !password}
+        disabled={hasEmptyFields || loading}
         onPress={validateAndSubmit}
       >
-        <FormButtonLabel>Log in</FormButtonLabel>
+        <FormButtonLabel>
+          {loading ? 'Loading...' : 'Log in'}
+        </FormButtonLabel>
       </FormButton>
     </LoginFormWrapper>
   );

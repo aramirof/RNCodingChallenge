@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import { LoginScreen } from './Auth';
 import { MyPhotosScreen } from './Photos';
@@ -8,7 +9,17 @@ const Stack = createNativeStackNavigator();
 
 const MainNavigator: FC = () => {
   // TODO: Agregar selector
-  const isAuthenticated = false;
+
+  const [token, setToken] = useState<string>();
+  const isAuthenticated = !!token;
+  const validateAuth = async () => {
+    const t = await AsyncStorage.getItem('AUTH_TOKEN');
+    setToken(t || '');
+  };
+
+  useEffect(() => {
+    validateAuth();
+  }, []);
   
   return (
     <Stack.Navigator
