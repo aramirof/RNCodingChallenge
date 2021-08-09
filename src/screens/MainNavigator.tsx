@@ -1,6 +1,5 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import { useAppSelector } from '../store/hooks';
 import { selectToken } from '../store/slices/session';

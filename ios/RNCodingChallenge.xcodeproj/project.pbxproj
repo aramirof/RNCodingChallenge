@@ -11,9 +11,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		19A2068352A749729BE0A111 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70C1338FE3D34782AB02DA6C /* Roboto-Bold.ttf */; };
 		5928AC334C0BCC46D3872BA6 /* libPods-RNCodingChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B6DAE2080617A9927D9B4 /* libPods-RNCodingChallenge.a */; };
+		665811729ABE4792A0EE98A3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A24D7F0F71914090B7B71DB5 /* Roboto-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8249129072E52EF10A6EFD2A /* libPods-RNCodingChallenge-RNCodingChallengeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB8BC47223260F4015C4443 /* libPods-RNCodingChallenge-RNCodingChallengeTests.a */; };
+		F2EAC7D70E3A45A3B2292548 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB9D2B96AD214CBE9E5296D6 /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +40,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNCodingChallenge/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNCodingChallenge/main.m; sourceTree = "<group>"; };
 		1F6D97A20493D3CCDCCDD90D /* Pods-RNCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-RNCodingChallenge/Pods-RNCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		70C1338FE3D34782AB02DA6C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../assets/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNCodingChallenge/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB8BC47223260F4015C4443 /* libPods-RNCodingChallenge-RNCodingChallengeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCodingChallenge-RNCodingChallengeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24D7F0F71914090B7B71DB5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../assets/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A3717EE4530E1AF53BD5DD79 /* Pods-RNCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-RNCodingChallenge/Pods-RNCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A49125A57D2BDAF0E156A22F /* Pods-RNCodingChallenge-RNCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodingChallenge-RNCodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-RNCodingChallenge-RNCodingChallengeTests/Pods-RNCodingChallenge-RNCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD2B6DAE2080617A9927D9B4 /* libPods-RNCodingChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCodingChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24E7F67A68CBF95EC0A0257 /* Pods-RNCodingChallenge-RNCodingChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodingChallenge-RNCodingChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-RNCodingChallenge-RNCodingChallengeTests/Pods-RNCodingChallenge-RNCodingChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB9D2B96AD214CBE9E5296D6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../assets/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8BDE3D7BCE3FAA78F274EF14 /* Pods */,
+				9BA714D97A2C40859978635E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,8 +152,18 @@
 				A49125A57D2BDAF0E156A22F /* Pods-RNCodingChallenge-RNCodingChallengeTests.debug.xcconfig */,
 				C24E7F67A68CBF95EC0A0257 /* Pods-RNCodingChallenge-RNCodingChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9BA714D97A2C40859978635E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70C1338FE3D34782AB02DA6C /* Roboto-Bold.ttf */,
+				DB9D2B96AD214CBE9E5296D6 /* Roboto-Medium.ttf */,
+				A24D7F0F71914090B7B71DB5 /* Roboto-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +262,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				19A2068352A749729BE0A111 /* Roboto-Bold.ttf in Resources */,
+				F2EAC7D70E3A45A3B2292548 /* Roboto-Medium.ttf in Resources */,
+				665811729ABE4792A0EE98A3 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ8BP3GPLL;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQ8BP3GPLL;
 				INFOPLIST_FILE = RNCodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

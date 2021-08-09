@@ -12,6 +12,7 @@ const ScreenHeader = styled.View`
 `;
 
 const ButtonLabel = styled.Text`
+  font-family: Roboto;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 1px;
@@ -52,6 +53,7 @@ const TabIcon = styled.Image`
 `;
 
 const TabLabel = styled.Text`
+  font-family: Roboto;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -82,6 +84,7 @@ const PhotoMeta = styled.View`
 `;
 
 const PhotoTitle = styled.Text`
+  font-family: Roboto;
   font-size: 16px;
   line-height: 19px;
   color: #373A4D;
@@ -89,6 +92,7 @@ const PhotoTitle = styled.Text`
 `;
 
 const PhotoDescription = styled.Text`
+  font-family: Roboto;
   font-size: 14px;
   line-height: 16px;
   color: #8F92A9;

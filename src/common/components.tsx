@@ -16,6 +16,7 @@ const Container = styled.View`
 `;
 
 const ScreenTitle = styled.Text`
+  font-family: Roboto;
   font-size: 28px;
   line-height: 40px;
   color: #373A4D;
@@ -55,6 +56,7 @@ const FormInputWrapper = styled.View`
 `;
 
 const FormInputLabel = styled.Text`
+  font-family: Roboto;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 1px;
@@ -77,6 +79,7 @@ const FormInputIconButton = styled.Pressable`
 `;
 
 const FormInputControl = styled.TextInput`
+  font-family: Roboto;
   background: #F5F5FA;
   border-radius: 2px;
   width: 100%;

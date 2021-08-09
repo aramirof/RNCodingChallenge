@@ -7,6 +7,7 @@ export const LoginHeader = styled.View`
 `;
 
 export const HeaderSubtitle = styled.Text`
+  font-family: Roboto;
   font-size: 14px;
   line-height: 16px;
   color: #373A4D;
@@ -18,6 +19,7 @@ const LoginFooterWrapper = styled.View`
 `;
 
 const TextLinkLabel = styled.Text`
+  font-family: Roboto;
   font-size: 16px;
   line-height: 19px;
   color: #373A4D;
@@ -37,6 +39,7 @@ export const FormButton = styled.TouchableOpacity`
 `;
 
 export const FormButtonLabel = styled.Text`
+  font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -50,6 +53,7 @@ export const LoginFormWrapper = styled.View`
 `;
 
 export const FormTextLinkLabel = styled.Text`
+  font-family: Roboto;
   font-size: 14px;
   line-height: 16px;
   text-align: right;
